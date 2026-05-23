@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Instagram, Mail, MapPin, Loader2 } from "lucide-react";
+import { Instagram as InstagramIcon, Mail, MapPin, Loader2 } from "lucide-react";
+const Instagram = InstagramIcon as React.ComponentType<{ className?: string; size?: number }>;
 import { Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { Button } from "@/components/ui/button";
