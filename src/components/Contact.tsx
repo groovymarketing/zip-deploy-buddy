@@ -66,7 +66,7 @@ export const Contact = ({ initialPlan = "" }: ContactProps) => {
                 </div>
                 <div>
                   <p className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest leading-none mb-1">Email</p>
-                  <p className="text-xs md:text-sm font-medium">patagoniainmersiva@gmail.com</p>
+                  <p className="text-xs md:text-sm font-medium">hola@patagoniainmersiva.com.ar</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 group">
