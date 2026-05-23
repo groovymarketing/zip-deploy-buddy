@@ -9,38 +9,82 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ProyectosRouteImport } from './routes/proyectos'
+import { Route as PresupuestoRouteImport } from './routes/presupuesto'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ViewProjectIdRouteImport } from './routes/view.$projectId'
 
+const ProyectosRoute = ProyectosRouteImport.update({
+  id: '/proyectos',
+  path: '/proyectos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PresupuestoRoute = PresupuestoRouteImport.update({
+  id: '/presupuesto',
+  path: '/presupuesto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ViewProjectIdRoute = ViewProjectIdRouteImport.update({
+  id: '/view/$projectId',
+  path: '/view/$projectId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/presupuesto': typeof PresupuestoRoute
+  '/proyectos': typeof ProyectosRoute
+  '/view/$projectId': typeof ViewProjectIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/presupuesto': typeof PresupuestoRoute
+  '/proyectos': typeof ProyectosRoute
+  '/view/$projectId': typeof ViewProjectIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/presupuesto': typeof PresupuestoRoute
+  '/proyectos': typeof ProyectosRoute
+  '/view/$projectId': typeof ViewProjectIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/presupuesto' | '/proyectos' | '/view/$projectId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/presupuesto' | '/proyectos' | '/view/$projectId'
+  id: '__root__' | '/' | '/presupuesto' | '/proyectos' | '/view/$projectId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PresupuestoRoute: typeof PresupuestoRoute
+  ProyectosRoute: typeof ProyectosRoute
+  ViewProjectIdRoute: typeof ViewProjectIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/proyectos': {
+      id: '/proyectos'
+      path: '/proyectos'
+      fullPath: '/proyectos'
+      preLoaderRoute: typeof ProyectosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/presupuesto': {
+      id: '/presupuesto'
+      path: '/presupuesto'
+      fullPath: '/presupuesto'
+      preLoaderRoute: typeof PresupuestoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,12 +92,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/view/$projectId': {
+      id: '/view/$projectId'
+      path: '/view/$projectId'
+      fullPath: '/view/$projectId'
+      preLoaderRoute: typeof ViewProjectIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PresupuestoRoute: PresupuestoRoute,
+  ProyectosRoute: ProyectosRoute,
+  ViewProjectIdRoute: ViewProjectIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
