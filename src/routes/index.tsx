@@ -1,26 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { Services } from "@/components/Services";
+import { Portfolio } from "@/components/Portfolio";
+import { PhotoGallery } from "@/components/PhotoGallery";
+import { VideoGallery } from "@/components/VideoGallery";
+import { Testimonials } from "@/components/Testimonials";
+import { Blog } from "@/components/Blog";
+import { Contact } from "@/components/Contact";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Patagonia Inmersiva | Tours 360° y Realidad Virtual en la Patagonia" },
+      { name: "description", content: "Producción 360°, fotografía inmersiva y video profesional en San Martín de los Andes, Neuquén. Real Estate, comercial y eventos." },
+      { property: "og:title", content: "Patagonia Inmersiva | Tours 360° y Realidad Virtual" },
+      { property: "og:description", content: "Mostrá tus propiedades como realmente se sienten." },
+      { property: "og:image", content: "/headerpic.jpeg" },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <Services />
+      <Portfolio />
+      <PhotoGallery />
+      <VideoGallery />
+      <Testimonials />
+      <Blog />
+      <Contact />
+    </>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
