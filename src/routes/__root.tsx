@@ -77,8 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "keywords", content: "tours virtuales, 360, patagonia, realidad virtual, real estate, fotografia, san martin de los andes" },
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Patagonia Inmersiva | Producción 360° y Realidad Virtual" },
-      { property: "og:description", content: "Transformamos espacios en experiencias digitales inmersivas." },
+      { property: "og:description", content: "Tours virtuales 360°, fotografía inmersiva y experiencias VR en la Patagonia. Real Estate, Hotelería y Eventos." },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Patagonia Inmersiva | Producción 360° y Realidad Virtual" },
+      { name: "twitter:description", content: "Tours virtuales 360°, fotografía inmersiva y experiencias VR en la Patagonia. Real Estate, Hotelería y Eventos." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/02231cd3-7c50-4ea8-831d-b6e02cc6dcaa/id-preview-1840a28f--e7b09154-0d1b-4723-97af-b6fbde22c2a4.lovable.app-1779546168412.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/02231cd3-7c50-4ea8-831d-b6e02cc6dcaa/id-preview-1840a28f--e7b09154-0d1b-4723-97af-b6fbde22c2a4.lovable.app-1779546168412.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
