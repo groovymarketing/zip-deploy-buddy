@@ -58,7 +58,7 @@ export const ThreeSixtyViewer = ({ image, autoLoad = true, pitch = 0, yaw = 0 }:
       const branding = document.createElement("div");
       branding.style.cssText = "position:absolute;bottom:16px;left:16px;z-index:1000;pointer-events:none;";
       const img = document.createElement("img");
-      img.src = "/logo Medium.png";
+      img.src = "/logo-Medium.png";
       img.style.cssText = `width:${window.innerWidth < 768 ? "100px" : "160px"};height:auto;opacity:0.6;filter:drop-shadow(0 4px 6px rgba(0,0,0,0.5));`;
       branding.appendChild(img);
       ref.current.appendChild(branding);

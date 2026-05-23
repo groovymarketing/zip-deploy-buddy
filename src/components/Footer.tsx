@@ -38,7 +38,7 @@ export const Footer = () => {
     <footer className="bg-black text-white pt-24 pb-12 px-[5%] border-t border-white/10">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center md:text-left">
         <div className="space-y-6 flex flex-col items-center md:items-start">
-          <img src="/logo Medium.png" alt="Patagonia Inmersiva" className="h-12 w-auto object-contain" referrerPolicy="no-referrer" />
+          <img src="/logo-Medium.png" alt="Patagonia Inmersiva" className="h-12 w-auto object-contain" referrerPolicy="no-referrer" />
           <p className="text-zinc-400 font-light text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
             Transformamos la manera en que el mundo ve tus espacios. Especialistas en tours virtuales 360 y contenido de alta gama para la región patagónica.
           </p>

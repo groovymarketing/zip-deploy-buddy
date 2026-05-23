@@ -56,7 +56,7 @@ const VideoCard = ({ video }: { video: typeof videos[0] }) => {
                     onLoad={() => setTimeout(() => setIframeLoaded(true), 1500)}
                   />
                   <div className={cn("absolute inset-0 flex items-center justify-center bg-zinc-900 z-20 transition-opacity duration-1000", iframeLoaded ? "opacity-0 pointer-events-none" : "opacity-100")}>
-                    <img src="/logo sq low Medium.png" alt="" className="w-16 h-16 opacity-40 object-contain animate-pulse" />
+                    <img src="/logo-sq-low-Medium.png" alt="" className="w-16 h-16 opacity-40 object-contain animate-pulse" />
                   </div>
                 </div>
               ) : (

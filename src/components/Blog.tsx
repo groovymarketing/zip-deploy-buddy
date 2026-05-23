@@ -50,7 +50,7 @@ En la práctica, los tours 360° están ayudando a que el proceso sea más trans
 Estos recorridos van más allá de una simple imagen panorámica. Permiten "caminar" por senderos, girar para ver el panorama completo, detenerse a observar detalles y tener una sensación mucho más cercana a estar presente.
 
 Para el sector turístico, esta herramienta ofrece varias ventajas. Facilita la planificación de viajes, permite mostrar lodges, cabañas o estancias tal como son y ayuda a que los potenciales visitantes se hagan una idea realista de lo que van a encontrar.`,
-    date: "28 Mar 2026", author: "Patagonia Inmersiva", category: "Viajes", image: "/7 lagos.png",
+    date: "28 Mar 2026", author: "Patagonia Inmersiva", category: "Viajes", image: "/7-lagos.png",
   },
 ];
 
