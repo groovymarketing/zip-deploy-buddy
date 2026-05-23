@@ -58,7 +58,7 @@ export const Navbar = () => {
     )}>
       <div className="mx-auto w-full h-full flex items-center justify-between">
         <Link to="/" className="flex items-center group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src="/logo Medium.png" alt="Patagonia Inmersiva" className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" referrerPolicy="no-referrer" />
+          <img src="/logo-Medium.png" alt="Patagonia Inmersiva" className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" referrerPolicy="no-referrer" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 h-full">

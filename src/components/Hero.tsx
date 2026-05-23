@@ -18,7 +18,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-8 pb-16 md:py-24 overflow-hidden bg-black text-white">
       <div className="absolute inset-0 z-0">
-        <img src="/headerpic mesh final low.jpg" alt="Experiencia Inmersiva Patagonia VR" className="w-full h-full object-cover object-[40%_center] md:object-center" referrerPolicy="no-referrer" />
+        <img src="/headerpic-mesh-final-low.jpg" alt="Experiencia Inmersiva Patagonia VR" className="w-full h-full object-cover object-[40%_center] md:object-center" referrerPolicy="no-referrer" />
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/30" />
       </div>
@@ -26,7 +26,7 @@ export const Hero = () => {
       <div className="relative z-10 lg:max-w-[90%] w-full text-center space-y-6 md:space-y-12 mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="space-y-4 md:space-y-10">
           <div className="flex justify-center mb-0 md:mb-6 -mt-8 md:mt-0">
-            <motion.img initial={{ opacity: 0, scale: 0.8, y: -20 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} src="/logo sq low Medium.png" alt="Patagonia Inmersiva" className="w-44 h-44 md:w-60 md:h-60 object-contain" referrerPolicy="no-referrer" />
+            <motion.img initial={{ opacity: 0, scale: 0.8, y: -20 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} src="/logo-sq-low-Medium.png" alt="Patagonia Inmersiva" className="w-44 h-44 md:w-60 md:h-60 object-contain" referrerPolicy="no-referrer" />
           </div>
           <h1 className="text-3xl md:text-7xl font-light tracking-tight leading-none flex flex-col justify-center items-center gap-y-1 drop-shadow-2xl">
             <span className="drop-shadow-md">¿Querés promocionar tu</span>
